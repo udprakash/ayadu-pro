@@ -17,8 +17,8 @@
 
         
 
-        <p><strong><%= link_to @pin.user.name, @pin.user.name  %></strong></p>
-        <a href="/request/<%=@pin.id%>">Request dude</a>
+        <p><strong><%= link_to @pin.user.name, "/#{@pin.user.name}"  %></strong></p>
+        <a href="/request/<%=@pin.id%>">Request Info</a>
 
         <% if @pin.user == current_user %>
          <%= link_to edit_pin_path(@pin) do %>

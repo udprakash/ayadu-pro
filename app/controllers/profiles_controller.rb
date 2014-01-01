@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
 
   	if @user
 
-  	    	@pins = current_user.pins.all
+  	    	@pins = @user.pins.all
 
   		render action: :show
   	else
