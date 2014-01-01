@@ -1,5 +1,7 @@
 Ayadu::Application.routes.draw do
-  
+
+    get "about" => "pages#about"
+
   resources :orders
 
   get "profiles/show"
@@ -9,7 +11,7 @@ Ayadu::Application.routes.draw do
   get '/:id', to: 'profiles#show'
 
   devise_for :users
-  get "about" => "pages#about"
+
 
   get '/request/:pin_id' => "orders#new_request_for_pin"
 
